@@ -1,0 +1,4 @@
+title,description,url
+A Deep Dive into Routing and Controller Dispatch in Rails, How does a web request accepted by Rack make it all the way to your Rails controller? Let's find out!, https://medium.com/rubyinside/a-deep-dive-into-routing-and-controller-dispatch-in-rails-8bf58c2cf3b5
+What’s coming to Rails 6.0?, Rails 6.0 will be released soon and it’s packed with many features that both smaller and bigger applications will benefit from., https://medium.com/rubyinside/whats-coming-to-rails-6-0-8ec79eea66da
+A Modern Web Application With Rails, 'In this article I will not tell you how great is Ruby On Rails but I’ll give you suggestions on the decisions to take when you will realize your next web application.', https://medium.com/rubyinside/a-modern-web-application-with-rails-da3deb48014c
