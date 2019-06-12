@@ -1,0 +1,41 @@
+.article {
+  border-width: thin;
+  border-color: black;
+  border-style: dashed;
+  padding: 10px;
+  margin: 5px;
+  background-color: #ab3737;
+}
+
+body {
+  background-color: #872929;
+  color: white;
+}
+
+h1 {
+  font-family: serif;
+  margin-left: 5px;
+
+}
+
+a {
+  color: #b2d2f6;
+}
+
+#button-div {
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
+  background-color: #dd8383;
+  font-size: 2em;
+  padding: 10px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 250px;
+  color: white;
+}
+
+#button-div a {
+  color: white;
+  text-decoration: none;
+}
