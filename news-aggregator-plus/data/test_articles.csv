@@ -1,0 +1,2 @@
+title,description,url
+A Deep Dive into Routing and Controller Dispatch in Rails,How does a web request accepted by Rack make it all the way to your Rails controller? Let's find out!,https://medium.com/rubyinside/a-deep-dive-into-routing-and-controller-dispatch-in-rails-8bf58c2cf3b5
