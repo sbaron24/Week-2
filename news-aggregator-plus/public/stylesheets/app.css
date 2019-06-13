@@ -15,7 +15,11 @@ body {
 h1 {
   font-family: serif;
   margin-left: 5px;
+}
 
+.title-link {
+  color: white;
+  text-decoration: none;
 }
 
 a {
