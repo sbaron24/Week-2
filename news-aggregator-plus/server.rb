@@ -12,7 +12,6 @@ get '/' do
 end
 
 get '/articles' do
-  # @articles = Article.read_csv("data/articles.csv")
   @articles = Article.read_csv(csv_file)
   erb :index
 end
@@ -27,8 +26,10 @@ post '/articles/new' do
   url = params["url"]
   @error = nil
   if title != "" && description != "" && url != ""
-    binding.pry
     CSV.open(csv_file, "a", headers: true) do |csv|
+      if url.index('http').nil? && url.index('https').nil?
+        url.prepend('http://')
+      end
       csv << [title, description, url]
     end
     redirect '/'
@@ -36,6 +37,29 @@ post '/articles/new' do
     @error = "Please complete all fields!"
   end
   erb :new
+end
+
+get '/articles/:id' do
+  articles = Article.read_csv(csv_file)
+  @article = articles.select { |article| article.id == params['id']}[0]
+  erb :show
+end
+
+get '/random' do
+  erb :random
+end
+
+get '/api/v1/articles.json' do
+  content_type :json
+  articles = Article.read_csv(csv_file)
+  article = articles[rand(articles.length)]
+  article_hash = {
+    "title": article.title,
+    "description": article.description,
+    "url": article.url
+  }
+  status 200
+  article_hash.to_json
 end
 
 def csv_file

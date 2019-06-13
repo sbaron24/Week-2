@@ -2,11 +2,16 @@
 
 <div id="article-list">
   <% @articles.each do |article| %>
-  <div class='article'>
-    <h3> <%= "#{article.title}" %> </h3>
-    <p> <%= "#{article.description}" %> </p>
-    <a href= <%="#{article.url}"%> target="_blank">Link</a>
+
+
+    <div class='article'>
+      <a class='title-link' href= <%= "/articles/#{article.id}"  %> >
+        <h3> <%= "#{article.title}" %> </h3>
+      </a>
+      <p> <%= "#{article.description}" %> </p>
+      <a href= <%="#{article.url}"%> target="_blank">Link</a>
     </div>
+
   <% end %>
 </div>
 
